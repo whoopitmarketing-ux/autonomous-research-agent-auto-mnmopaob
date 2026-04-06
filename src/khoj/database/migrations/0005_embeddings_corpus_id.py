@@ -1,0 +1,17 @@
+from django.db import migrations, models
+
+import uuid
+
+
+class Migration(migrations.Migration):
+    dependencies = [
+        ("database", "0004_content_types_and_more"),
+    ]
+
+    operations = [
+        migrations.AddField(
+            model_name="embeddings",
+            name="corpus_id",
+            field=models.UUIDField(default=uuid.uuid4, editable=False),
+        ),
+    ]
